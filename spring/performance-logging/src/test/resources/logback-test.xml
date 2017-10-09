@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>web - %date [%thread] %-5level %logger{36} - %message%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <logger name="de.baitando.tutorials.spring.perflog.service.impl.UserServiceImpl" level="TRACE" />
+    <logger name="de.baitando.tutorials.spring.perflog.service.UserService" level="TRACE" />
+    <logger name="org.springframework.aop.interceptor.PerformanceMonitorInterceptor" level="TRACE" />
+    <logger name="de.baitando.tutorials.spring.perflog.service.UserServiceTest" level="TRACE" />
+
+    <root level="WARN">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
